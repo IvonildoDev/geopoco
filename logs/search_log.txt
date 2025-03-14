@@ -1,0 +1,36 @@
+2025-03-14 19:13:19 - Iniciando pesquisa
+2025-03-14 19:13:19 - Termo: 'rio de janeiro', Tipo: 'all'
+2025-03-14 19:13:19 - Colunas na tabela: id, city, wellName, latitude, longitude, photo, created_at
+2025-03-14 19:13:19 - Encontrados 1 resultados
+2025-03-14 19:13:19 - Primeiro resultado normalizado: {"id":2,"city":"Rio de Janeiro","wellName":"Po\u00e7o Copacabana","latitude":"-22.96917700","longitude":"-43.18085100","photo":null}
+2025-03-14 19:14:09 - Iniciando pesquisa
+2025-03-14 19:14:09 - Termo: 'maceio', Tipo: 'all'
+2025-03-14 19:14:09 - Colunas na tabela: id, city, wellName, latitude, longitude, photo, created_at
+2025-03-14 19:14:09 - Encontrados 1 resultados
+2025-03-14 19:14:09 - Primeiro resultado normalizado: {"id":4,"city":"maceio","wellName":"ma-03","latitude":"-9.59183300","longitude":"-35.96391500","photo":"67d471e3ed4d9_OIP.jpg"}
+2025-03-14 19:15:25 - Iniciando pesquisa
+2025-03-14 19:15:25 - Termo: 'atalaia-al', Tipo: 'all'
+2025-03-14 19:15:26 - Colunas na tabela: id, city, wellName, latitude, longitude, photo, created_at
+2025-03-14 19:15:26 - Encontrados 0 resultados
+2025-03-14 19:25:26 - Iniciando pesquisa
+2025-03-14 19:25:26 - Termo: 'ata', Tipo: 'all'
+2025-03-14 19:25:26 - Colunas na tabela: id, city, wellName, latitude, longitude, photo, created_at
+2025-03-14 19:25:26 - Encontrados 0 resultados
+2025-03-14 19:25:33 - Iniciando pesquisa
+2025-03-14 19:25:33 - Termo: 'atalaia', Tipo: 'all'
+2025-03-14 19:25:33 - Colunas na tabela: id, city, wellName, latitude, longitude, photo, created_at
+2025-03-14 19:25:33 - Encontrados 0 resultados
+2025-03-14 19:25:56 - Iniciando pesquisa
+2025-03-14 19:25:56 - Termo: 'ma-05', Tipo: 'well'
+2025-03-14 19:25:56 - Colunas na tabela: id, city, wellName, latitude, longitude, photo, created_at
+2025-03-14 19:25:56 - Encontrados 1 resultados
+2025-03-14 19:25:56 - Primeiro resultado normalizado: {"id":5,"city":"maceio","wellName":"ma-05","latitude":"-9.59183000","longitude":"-35.96391000","photo":"67d472a30811d_OIP.jpg"}
+2025-03-14 19:26:02 - Iniciando pesquisa
+2025-03-14 19:26:02 - Termo: 'ma-05', Tipo: 'city'
+2025-03-14 19:26:02 - Colunas na tabela: id, city, wellName, latitude, longitude, photo, created_at
+2025-03-14 19:26:02 - Encontrados 0 resultados
+2025-03-14 19:26:06 - Iniciando pesquisa
+2025-03-14 19:26:06 - Termo: 'ma-05', Tipo: 'all'
+2025-03-14 19:26:06 - Colunas na tabela: id, city, wellName, latitude, longitude, photo, created_at
+2025-03-14 19:26:06 - Encontrados 1 resultados
+2025-03-14 19:26:06 - Primeiro resultado normalizado: {"id":5,"city":"maceio","wellName":"ma-05","latitude":"-9.59183000","longitude":"-35.96391000","photo":"67d472a30811d_OIP.jpg"}

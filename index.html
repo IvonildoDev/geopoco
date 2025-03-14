@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoWell - Sistema de Cadastro de Poços</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Certifique-se de que o caminho está correto -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header com navbar -->
+    <header class="app-header">
+        <div class="logo-container">
+            <i class="fas fa-water logo-icon"></i>
+            <h1 class="logo-text">GeoPoço</h1>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#" class="active" data-section="cadastro"><i class="fas fa-plus-circle"></i> Cadastrar</a>
+                </li>
+                <li><a href="#" data-section="busca"><i class="fas fa-search"></i> Buscar</a></li>
+                <li><a href="#" data-section="mapa"><i class="fas fa-map-marked-alt"></i> Mapa</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Main container -->
+    <main class="container">
+        <!-- Seção de cadastro -->
+        <section id="cadastro" class="section-container active-section">
+            <div class="card">
+                <div class="card-header">
+                    <h2><i class="fas fa-plus-circle"></i> Cadastro de Poços</h2>
+                </div>
+                <div class="card-body">
+                    <form id="wellForm" method="POST" action="php/save.php" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="city">Nome da Cidade</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-city"></i>
+                                <input type="text" id="city" name="city" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="wellName">Nome do Poço</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-tint"></i>
+                                <input type="text" id="wellName" name="wellName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label><i class="fas fa-map-marker-alt"></i> Coordenadas</label>
+                            <div class="coords-container">
+                                <div class="coords-inputs">
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-arrows-alt-v"></i>
+                                        <input type="text" id="latitude" name="latitude" placeholder="Latitude"
+                                            readonly>
+                                    </div>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-arrows-alt-h"></i>
+                                        <input type="text" id="longitude" name="longitude" placeholder="Longitude"
+                                            readonly>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn location-btn" id="getCoordinatesBtn">
+                                    <i class="fas fa-crosshairs"></i> Obter Localização
+                                </button>
+                            </div>
+                            <div class="location-status" id="locationStatus"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="photo">Foto do Poço</label>
+                            <div class="photo-upload-container">
+                                <div class="photo-preview" id="photoPreviewContainer">
+                                    <div class="photo-placeholder" id="photoPlaceholder">
+                                        <i class="fas fa-camera"></i>
+                                        <span>Selecionar Imagem</span>
+                                    </div>
+                                    <img id="previewImage" style="display:none;">
+                                </div>
+                                <input type="file" id="photo" name="photo" accept="image/*" class="photo-input">
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="reset" class="btn btn-secondary">
+                                <i class="fas fa-undo"></i> Limpar
+                            </button>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save"></i> Salvar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de busca -->
+        <section id="busca" class="section-container">
+            <div class="card">
+                <div class="card-header">
+                    <h2><i class="fas fa-search"></i> Buscar Poços</h2>
+                </div>
+                <div class="card-body">
+                    <div class="search-container">
+                        <div class="search-bar">
+                            <div class="input-with-icon search-input-container">
+                                <i class="fas fa-search"></i>
+                                <input type="text" id="searchInput" placeholder="Digite o nome da cidade ou poço">
+                            </div>
+                            <button id="searchButton" class="btn btn-primary search-btn">
+                                <i class="fas fa-search"></i> Buscar
+                            </button>
+                        </div>
+
+                        <div class="search-filters">
+                            <span class="filter-label">Filtrar por:</span>
+                            <div class="filter-options">
+                                <label class="filter-option">
+                                    <input type="radio" name="searchType" value="all" checked>
+                                    <span>Todos</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="radio" name="searchType" value="city">
+                                    <span>Cidade</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="radio" name="searchType" value="well">
+                                    <span>Poço</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="searchResults" class="results-container">
+                        <div class="no-results">
+                            <i class="fas fa-search"></i>
+                            <p>Digite um termo para buscar poços ou cidades</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção do mapa -->
+        <section id="mapa" class="section-container">
+            <div class="card">
+                <div class="card-header">
+                    <h2><i class="fas fa-map-marked-alt"></i> Mapa de Poços</h2>
+                    <div class="map-controls">
+                        <button id="zoomInBtn" class="btn btn-icon"><i class="fas fa-plus"></i></button>
+                        <button id="zoomOutBtn" class="btn btn-icon"><i class="fas fa-minus"></i></button>
+                        <button id="locateMeBtn" class="btn btn-icon"><i class="fas fa-location-arrow"></i></button>
+                    </div>
+                </div>
+                <div class="card-body no-padding">
+                    <div id="mapContainer" class="map-container">
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 GeoPoço - Sistema de Cadastro e Localização de Poços</p>
+            <P>Desenvolvido Por : Ivonildo Lima</P>
+        </div>
+    </footer>
+
+    <!-- Modal para visualização de detalhes -->
+    <div class="modal" id="detailModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Detalhes do Poço</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Conteúdo preenchido dinamicamente -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="closeModalBtn">Fechar</button>
+                <button class="btn btn-primary" id="showOnMapBtn">Ver no Mapa</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notificação de sucesso -->
+    <div class="notification" id="notification">
+        <div class="notification-content">
+            <i class="fas fa-check-circle notification-icon"></i>
+            <div class="notification-message" id="notificationMessage"></div>
+            <button class="notification-close">&times;</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

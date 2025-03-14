@@ -1,0 +1,6 @@
+2025-03-14 19:13:55 - Iniciando cadastro de poço
+2025-03-14 19:13:55 - Foto salva como: 67d471e3ed4d9_OIP.jpg
+2025-03-14 19:13:55 - Poço cadastrado com sucesso. ID: 4
+2025-03-14 19:17:07 - Iniciando cadastro de poço
+2025-03-14 19:17:07 - Foto salva como: 67d472a30811d_OIP.jpg
+2025-03-14 19:17:07 - Poço cadastrado com sucesso. ID: 5
