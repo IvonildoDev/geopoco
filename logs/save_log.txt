@@ -4,3 +4,57 @@
 2025-03-14 19:17:07 - Iniciando cadastro de poço
 2025-03-14 19:17:07 - Foto salva como: 67d472a30811d_OIP.jpg
 2025-03-14 19:17:07 - Poço cadastrado com sucesso. ID: 5
+2025-03-14 21:16:31 - Iniciando cadastro de poço
+2025-03-14 21:16:31 - Foto salva como: 67d48e9f3adac_OIP.jpg
+2025-03-14 21:16:31 - Erro: SQLSTATE[HY000] [1049] Unknown database 'geowell'
+2025-03-14 21:17:25 - Iniciando cadastro de poço
+2025-03-14 21:17:25 - Foto salva como: 67d48ed55f414_OIP.jpg
+2025-03-14 21:17:25 - Erro: SQLSTATE[HY000] [1049] Unknown database 'geowell'
+2025-03-14 21:20:16 - Erro de banco de dados: SQLSTATE[HY000] [1049] Unknown database 'geowell'
+2025-03-14 21:23:17 - Erro de banco de dados: SQLSTATE[HY000] [1049] Unknown database 'geowell'
+2025-03-15 02:43:54 - Erro de banco de dados: SQLSTATE[HY000] [1049] Unknown database 'geowell'
+2025-03-15 02:44:39 - Erro de banco de dados: SQLSTATE[HY000] [1049] Unknown database 'geowell'
+2025-03-15 02:48:22 - Erro de banco de dados: SQLSTATE[HY000] [1049] Unknown database 'geowell'
+Código: 1049
+Traço: #0 C:\xampp\htdocs\geopoco\php\save.php(32): PDO->__construct('mysql:host=loca...', 'root', Object(SensitiveParameterValue))
+#1 {main}
+2025-03-15 02:51:30 - Erro de banco de dados: SQLSTATE[HY000] [1049] Unknown database 'geowell'
+Código: 1049
+Traço: #0 C:\xampp\htdocs\geopoco\php\save.php(32): PDO->__construct('mysql:host=loca...', 'root', Object(SensitiveParameterValue))
+#1 {main}
+2025-03-15 02:54:07 - Conexão inicial ao MySQL estabelecida
+2025-03-15 02:54:07 - Verificação de banco de dados: Banco 'geowell' não existe
+2025-03-15 02:54:07 - Tentando criar o banco de dados 'geowell'
+2025-03-15 02:54:07 - Banco de dados 'geowell' criado com sucesso
+2025-03-15 02:54:07 - Conexão com banco de dados 'geowell' estabelecida
+2025-03-15 02:54:07 - Verificação de tabela: Tabela 'wells' não existe
+2025-03-15 02:54:07 - Tabela 'wells' criada com sucesso
+2025-03-15 02:54:07 - Iniciando cadastro de poço
+2025-03-15 02:54:07 - POST recebidos: Array
+(
+    [city] => maceio
+    [wellName] => ma-05
+    [latitude] => -9.591831
+    [longitude] => -35.963914
+)
+
+2025-03-15 02:54:07 - FILES recebidos: Array
+(
+    [photo] => Array
+        (
+            [name] => OIP.jpg
+            [full_path] => OIP.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\xampp\tmp\phpBAD8.tmp
+            [error] => 0
+            [size] => 6093
+        )
+
+)
+
+2025-03-15 02:54:07 - Dados validados: city=maceio, wellName=ma-05, lat=-9.591831, long=-35.963914
+2025-03-15 02:54:07 - Foto salva como: 67d4ddbfb802c_OIP.jpg em ../uploads/67d4ddbfb802c_OIP.jpg
+2025-03-15 02:54:07 - SQL preparado: INSERT INTO wells (city, wellName, latitude, longitude, photo) VALUES (?, ?, ?, ?, ?)
+2025-03-15 02:54:07 - Parâmetros: city=maceio, wellName=ma-05, lat=-9.591831, long=-35.963914, photo=67d4ddbfb802c_OIP.jpg
+2025-03-15 02:54:07 - Execução da SQL: Sucesso
+2025-03-15 02:54:07 - Poço cadastrado com sucesso. ID: 1

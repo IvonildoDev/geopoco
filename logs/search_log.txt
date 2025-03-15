@@ -34,3 +34,40 @@
 2025-03-14 19:26:06 - Colunas na tabela: id, city, wellName, latitude, longitude, photo, created_at
 2025-03-14 19:26:06 - Encontrados 1 resultados
 2025-03-14 19:26:06 - Primeiro resultado normalizado: {"id":5,"city":"maceio","wellName":"ma-05","latitude":"-9.59183000","longitude":"-35.96391000","photo":"67d472a30811d_OIP.jpg"}
+2025-03-14 21:13:12 - Iniciando pesquisa
+2025-03-14 21:13:12 - Erro: SQLSTATE[HY000] [1049] Unknown database 'geowell'
+2025-03-14 21:13:19 - Iniciando pesquisa
+2025-03-14 21:13:19 - Erro: SQLSTATE[HY000] [1049] Unknown database 'geowell'
+2025-03-14 21:16:50 - Iniciando pesquisa
+2025-03-14 21:16:50 - Erro: SQLSTATE[HY000] [1049] Unknown database 'geowell'
+2025-03-14 21:16:57 - Iniciando pesquisa
+2025-03-14 21:16:57 - Erro: SQLSTATE[HY000] [1049] Unknown database 'geowell'
+2025-03-14 21:20:29 - Iniciando pesquisa
+2025-03-14 21:20:29 - Erro: SQLSTATE[HY000] [1049] Unknown database 'geowell'
+2025-03-14 21:20:35 - Iniciando pesquisa
+2025-03-14 21:20:35 - Erro: SQLSTATE[HY000] [1049] Unknown database 'geowell'
+2025-03-15 02:42:48 - Iniciando pesquisa
+2025-03-15 02:42:48 - Erro: SQLSTATE[HY000] [1049] Unknown database 'geowell'
+2025-03-15 02:42:58 - Iniciando pesquisa
+2025-03-15 02:42:58 - Erro: SQLSTATE[HY000] [1049] Unknown database 'geowell'
+2025-03-15 02:44:56 - Iniciando pesquisa
+2025-03-15 02:44:56 - Erro: SQLSTATE[HY000] [1049] Unknown database 'geowell'
+2025-03-15 02:48:37 - Iniciando pesquisa
+2025-03-15 02:48:37 - Erro: SQLSTATE[HY000] [1049] Unknown database 'geowell'
+2025-03-15 02:51:54 - Iniciando pesquisa
+2025-03-15 02:51:54 - Erro: SQLSTATE[HY000] [1049] Unknown database 'geowell'
+2025-03-15 02:54:22 - Iniciando pesquisa
+2025-03-15 02:54:22 - Termo: 'maceio', Tipo: 'all'
+2025-03-15 02:54:22 - Colunas na tabela: id, city, wellName, latitude, longitude, photo, created_at
+2025-03-15 02:54:22 - Encontrados 1 resultados
+2025-03-15 02:54:22 - Primeiro resultado normalizado: {"id":1,"city":"maceio","wellName":"ma-05","latitude":"-9.59183100","longitude":"-35.96391400","photo":"67d4ddbfb802c_OIP.jpg"}
+2025-03-15 02:54:46 - Iniciando pesquisa
+2025-03-15 02:54:46 - Termo: 'ma-05', Tipo: 'well'
+2025-03-15 02:54:46 - Colunas na tabela: id, city, wellName, latitude, longitude, photo, created_at
+2025-03-15 02:54:46 - Encontrados 1 resultados
+2025-03-15 02:54:46 - Primeiro resultado normalizado: {"id":1,"city":"maceio","wellName":"ma-05","latitude":"-9.59183100","longitude":"-35.96391400","photo":"67d4ddbfb802c_OIP.jpg"}
+2025-03-15 02:54:54 - Iniciando pesquisa
+2025-03-15 02:54:54 - Termo: 'ma-05', Tipo: 'well'
+2025-03-15 02:54:54 - Colunas na tabela: id, city, wellName, latitude, longitude, photo, created_at
+2025-03-15 02:54:54 - Encontrados 1 resultados
+2025-03-15 02:54:54 - Primeiro resultado normalizado: {"id":1,"city":"maceio","wellName":"ma-05","latitude":"-9.59183100","longitude":"-35.96391400","photo":"67d4ddbfb802c_OIP.jpg"}

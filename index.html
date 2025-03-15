@@ -12,6 +12,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <script>
+        // Evitar erros 404 para arquivos .map
+        window.addEventListener('error', function (e) {
+            if (e.filename && e.filename.endsWith('.map')) {
+                e.preventDefault();
+                return false;
+            }
+        }, true);
+    </script>
 </head>
 
 <body>
@@ -181,6 +190,7 @@
         <div class="footer-content">
             <p>&copy; 2025 GeoPoço - Sistema de Cadastro e Localização de Poços</p>
             <P>Desenvolvido Por : Ivonildo Lima</P>
+            <p><a href="php/setup_db.php" class="footer-link">Configurar Banco de Dados</a></p>
         </div>
     </footer>
 
